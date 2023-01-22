@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Stack } from "@mui/system";
+import Grid1 from "./Grid1";
 
-function App() {
+
+const App = () => {
+  console.log('Hello from component')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Stack spacing={2} direction="row">
+      <Grid1></Grid1>
+    </Stack>
+  )
 }
 
-export default App;
+// export default function App() {
+//   return (
+//     <Stack spacing={2} direction="row">
+//       <Button variant="text">Text</Button>
+//       <Button variant="contained">Contained</Button>
+//       <Button variant="outlined">Outlined</Button>
+//     </Stack>
+//   );
+
+export default App
