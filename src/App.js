@@ -1,15 +1,43 @@
-import { Stack } from "@mui/system";
+import * as React from 'react'
 import Grid1 from "./Grid1";
+import Form from "./Form";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
-
-const App = () => {
-  console.log('Hello from component')
+function Sample () {
   return (
-    <Stack spacing={2} direction="row">
+    <div>
       <Grid1></Grid1>
-    </Stack>
-  )
+    </div>
+  );
 }
+
+export default function App() {
+  return(
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Sample />} />
+        <Route path="/Form" element={<Form/>} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+// const App = () => {
+//   console.log('Hello from component') 
+//   return (
+//     <Stack spacing={2} direction="row">
+//       {/* <Grid1>
+//       </Grid1> */}
+//       <Form></Form>
+
+
+//     </Stack>
+//   )
+// }
 
 // export default function App() {
 //   return (
@@ -20,4 +48,3 @@ const App = () => {
 //     </Stack>
 //   );
 
-export default App

@@ -3,6 +3,7 @@ import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import {Link} from "react-router-dom";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -20,7 +21,9 @@ const Item = styled(Paper)(({ theme }) => ({
         <Grid container spacing={{ xs: 2, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           {Array.from(Array(9)).map((_, index) => (
             <Grid item xs={4} sm={4} md={4} key={index}>
-              <Item>xs=2</Item>
+              <Item>
+              <Link to="/Form"> Create event </Link>
+              </Item>
             </Grid>
           ))}
         </Grid>
